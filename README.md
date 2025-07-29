@@ -1,6 +1,12 @@
 # Anti-Spam ML Pipeline
 
-This repository contains a complete pipeline for email spam classification using machine learning. The pipeline is designed to be run in a local environment for security, particularly when working with company emails. This pipeline is language independent (tested on real polish and english emails dataset). Tested on local Minstral-Small-3.2_24B running on llama.cpp and Ollama.
+This repository contains a complete pipeline for email spam classification using machine learning. The pipeline is designed to be run in a local environment for security, particularly when working with company emails. 
+
+This pipeline is language independent (tested on real polish and english emails dataset). 
+
+Tested on local Minstral-Small-3.2_24B running on llama.cpp and Ollama.
+
+You can deploy model using: https://github.com/izorkus/antispam-ml-filter-microservice repo.
 
 ## Key Features
 
