@@ -165,8 +165,8 @@ tools/
 venv/
 
 # DEV dataset
-dataset/input/*
-dataset/input_test/*
+dataset/input/*.eml
+dataset/input_test/*.eml
 
 # dev and testing files
 system_prompt_priv.txt
@@ -178,6 +178,8 @@ raport_from_labeling.csv
 raport_from_labeling.json
 revieved_raport.csv
 README_OLD.md
-/model_output/*
+/model_output/*.pkl
+/model_output/*.csv
+/model_output/*.json
 /test_mails_ham/
 /test_mails_spam/
