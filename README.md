@@ -100,7 +100,7 @@ python train.py --input_csv revieved_raport.csv
 
 This is a ***text classification pipeline*** with 2 main steps:
 
-1. **Feature Engineering** (`features` step)
+1. **Feature Engineering** (features step)
 - Type: FeatureUnion (combines multiple feature extraction methods)
 - Components: 
   - Text Vectorization: Uses TF-IDF (Term Frequency-Inverse Document Frequency) to convert text into numerical features
@@ -113,7 +113,7 @@ This is a ***text classification pipeline*** with 2 main steps:
     - Removes Polish stop words (common words like "i", "na", "do", etc.)
   - Preprocessing: Converts text to lowercase, removes accents
 
-2. **Classification** (`classifier` step)
+2. **Classification** (classifier step)
 - Type: Logistic Regression
 - Configuration:
   - Regularization: L2 penalty with strength `C=10.0` (helps prevent overfitting)
