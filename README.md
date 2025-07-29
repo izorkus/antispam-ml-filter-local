@@ -96,7 +96,7 @@ This script trains the spam classification model:
 python train.py --input_csv revieved_raport.csv
 ```
 
-**Pipeline Description**
+**Pipeline Description** (that scores highest on Polish email dataset)
 
 This is a ***text classification pipeline*** with 2 main steps:
 
