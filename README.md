@@ -122,7 +122,9 @@ This is a ***text classification pipeline*** with 2 main steps:
   - Random state: Fixed (`321345`) for reproducible results
 
 **Purpose**
+
 This pipeline is designed for **text classification tasks** in Polish language, where it takes raw text input and predicts categorical labels. The TF-IDF vectorizer with n-grams captures both individual important words and meaningful word combinations, while the balanced logistic regression handles classification with good performance on imbalanced datasets.
+
 ## Performance
 
 The pipeline has been extensively tested and shows strong performance metrics:
