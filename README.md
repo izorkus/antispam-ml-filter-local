@@ -220,7 +220,7 @@ python train.py --input_csv revieved_raport.csv
 ├── model_output/          # Directory for trained models
 └── requirements.txt       # Python dependencies
 ```
-## Author:
+## Author
 
 Adam Mazurkiewicz
 
