@@ -1,0 +1,5 @@
+# Set url and model name for labeling LLM - OpenAI compatible 
+LLM_API_URL=http://localhost:11434
+LLM_MODEL_NAME=mistral-small3.2:latest
+# API key if needed 
+LLM_API_KEY=
