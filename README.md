@@ -96,6 +96,33 @@ This script trains the spam classification model:
 python train.py --input_csv revieved_raport.csv
 ```
 
+**Pipeline Description**
+
+This is a ***text classification pipeline*** with 2 main steps:
+
+1. **Feature Engineering** (`features` step)
+- Type: FeatureUnion (combines multiple feature extraction methods)
+- Components: 
+  - Text Vectorization: Uses TF-IDF (Term Frequency-Inverse Document Frequency) to convert text into numerical features
+- Configuration:
+  - N-grams* 1 to 3 words (captures single words, pairs, and triplets)
+  - Vocabulary size: Limited to 50,000 most important terms
+  - Text filtering: 
+    - Ignores words appearing in less than 2 documents (`min_df=2`)
+    - Ignores words appearing in more than 80% of documents (`max_df=0.8`)
+    - Removes Polish stop words (common words like "i", "na", "do", etc.)
+  - Preprocessing: Converts text to lowercase, removes accents
+
+2. **Classification** (`classifier` step)
+- Type: Logistic Regression
+- Configuration:
+  - Regularization: L2 penalty with strength `C=10.0` (helps prevent overfitting)
+  - Class balancing: Automatically adjusts for imbalanced datasets
+  - Solver: SAGA algorithm (efficient for large datasets)
+  - Random state: Fixed (`321345`) for reproducible results
+
+**Purpose**
+This pipeline is designed for **text classification tasks** in Polish language, where it takes raw text input and predicts categorical labels. The TF-IDF vectorizer with n-grams captures both individual important words and meaningful word combinations, while the balanced logistic regression handles classification with good performance on imbalanced datasets.
 ## Performance
 
 The pipeline has been extensively tested and shows strong performance metrics:
